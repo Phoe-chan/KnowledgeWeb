@@ -7,6 +7,7 @@ Initial Ideas:
 
 HTML 5 canvas with JQuery pulling relationships from RUBY MVC application.
 var ctx = $("#canvas").getContext("2d").{drawing commands}; imageData = ctx.getImageData(0,0,height,width); targetCanvas.getContext("2d").putImageData(imageData,0,0); then use ctx.scale(x,x); ctx.clearRect(0,0,w,h);ctx.drawImage(copiedanvas,0,0);ctx.restore(); to do the zooming operations; 
+Initial version should just display current fact and relations, with a click handler to navigate to related facts. A search function to find a link between two facts would also be needed.
 Userlevel security to restrict facts to individual users.
 http://www.ruby-toolbox.com/categories/rails_authorization.html
 GameMaster role to allow some users to see all other character's facts.
