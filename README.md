@@ -3,6 +3,14 @@ KnowledgeWeb
 
 A RESTful HTML5 webapp to visualise facts and relationships
 
+Notes:
+
+There is a problem with webrick that results in it warning for content length onscript files. Either ignore these warnings or apply the below patch to your webrick:
+
+https://bugs.ruby-lang.org/attachments/2300/204_304_keep_alive.patch
+
+Elected to turn on email confirmation for the Devise user registration steps just to show that it is secure and funky. As a downside if you do not have an SMTP server configured on your localhost the mails are not going to be sent. You can check the debug output in the console to find the confirmation links.
+
 Initial Ideas:
 
 HTML 5 canvas with JQuery pulling relationships from RUBY MVC application.
