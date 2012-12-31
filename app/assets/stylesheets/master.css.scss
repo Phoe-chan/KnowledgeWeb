@@ -1,0 +1,52 @@
+// Master stylesheet for the default layout 
+
+@mixin thin_borders {
+    border: {
+      style: solid;
+      width: 1px;
+      color: black;
+    }
+}
+
+#user_nav {
+  @include thin_borders;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  width: 300px;
+}
+
+.messages {
+  .notice {
+    font: {
+      weight: bold;
+    }
+    background-color: #FF3300;
+  }
+  .alert {
+    font: {
+      style: italic;
+    }
+    background-color: #FF3300;
+  }
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 50px;
+}
+
+.title {
+  height: 50px;
+  font-size: x-large;
+}
+
+.main {
+  clear: both;
+  width: 100%;
+  padding: {
+    left: 5px
+  }
+}
