@@ -1,2 +1,15 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+Installation steps
+
+You will need to install Ruby 1.9.3 or higher for compatibility with the latest version of rails. On Ubuntu this can be done by using the installRuby193.sh shell script in this directory.
+
+You will need to have sqlite3 and dev libraries: sudo aptitude install libsqlite3-dev sqlite3
+You also need a javascript runtime. The easiest way to get this is to install node.js using the instructions on: http://github.com/joyent/node/wiki/installing-Node.js-via-package-manager 
+Once you have Ruby you need to get rails with: sudo gem install rails
+Once all this is done you can use bundle to install everything else: sudo bundle install
+Now you need the database: rake db:migrate
+Finally apply the patch at https://bugs.ruby-lang.org/attachments/2300/204_304_keep_alive.patch to the code in the directory located by gem which webrick
+
+
