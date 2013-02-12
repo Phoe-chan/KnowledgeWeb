@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sourceFact_id: 1
+  targetFact_id: 1
+  relationship: "fish"
+
+two:
+  sourceFact_id: 1
+  targetFact_id: 1
+  relationship: "pals"
