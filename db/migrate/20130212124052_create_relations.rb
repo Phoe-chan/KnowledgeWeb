@@ -7,5 +7,8 @@ class CreateRelations < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :relations, :sourceFact_id
+    add_index :relations, :targetFact_id
   end
 end

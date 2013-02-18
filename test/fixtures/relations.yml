@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  sourceFact_id: 1
-  targetFact_id: 1
-  relationship: "fish"
+r1:
+  sourceFact: f1
+  targetFact: f2
+  owner: c1
+  relationship: "coworkers"
 
-two:
-  sourceFact_id: 1
-  targetFact_id: 1
+r2:
+  sourceFact: f2
+  targetFact: f1
+  owner: c1
   relationship: "pals"

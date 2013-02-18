@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212124052) do
+ActiveRecord::Schema.define(:version => 20130218131149) do
+
+  create_table "characters", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "characters", ["user_id"], :name => "index_characters_on_user_id"
 
   create_table "facts", :force => true do |t|
     t.string   "name"
@@ -25,7 +34,12 @@ ActiveRecord::Schema.define(:version => 20130212124052) do
     t.integer  "targetFact_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "character_id"
   end
+
+  add_index "relations", ["character_id"], :name => "index_relations_on_character_id"
+  add_index "relations", ["sourceFact_id"], :name => "index_relations_on_sourceFact_id"
+  add_index "relations", ["targetFact_id"], :name => "index_relations_on_targetFact_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
